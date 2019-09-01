@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <SurfaceView
+        android:id="@+id/mFirstSurfaceView"
+        android:layout_width="300sp"
+        android:layout_height="360sp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/img_show" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#0E0E0E">
+        <!--提供预览功能，以及从相册选取图片进行识别功能-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_show"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <Button
+            android:id="@+id/take_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:text="拍照" />
+        <!--点击观看识别结果-->
+        <Button
+            android:id="@+id/recognition_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17dp"
+            android:text="结果" />
+
+        <Button
+            android:id="@+id/take_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/take_picture"
+            android:layout_alignTop="@+id/img_show"
+            android:text="Record" />
+
+        <Button
+            android:id="@+id/openCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/take_video"
+            android:layout_alignBottom="@+id/take_video"
+            android:layout_alignStart="@+id/recognition_result"
+            android:text="别点我" />
+
+
+    </RelativeLayout>
+</LinearLayout>
